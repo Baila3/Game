@@ -19,13 +19,11 @@ def matrixsolver():
   
   for rows in range(len(matrix[0])):
     if matrix[y][y] != 1:
-    # for numbers in range(len(matrix[0])):
       rref[y][y] = int(matrix[y][y]) / int(matrix[y][y])
 
     if y + 1 != len(matrix):
       if matrix[y + 1][y] != 0:
         multiple = int(matrix[y + 1][y]) / int(matrix[y][y])
-      # for numbers in range(len(matrix[1])):
         rref[y + 1][y] = int(matrix[y + 1][y]) - (multiple * int(matrix[y][y]))
         y+=1
     else:
