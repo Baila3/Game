@@ -16,7 +16,7 @@ def matrixsolver():
 
   matrix = [rawNum[x:x+int(cols)] for x in range(0, len(rawNum), int(cols))]
   rref = [rawNum[x:x+int(cols)] for x in range(0, len(rawNum), int(cols))]
-  
+  #rref
   for rows in range(len(matrix[0])):
     if matrix[y][y] != 1:
       rref[y][y] = int(matrix[y][y]) / int(matrix[y][y])
@@ -32,7 +32,7 @@ def matrixsolver():
 
     if matrix[y][y] !=1:
       rref[y][y] = int(matrix[y][y]) / int(matrix[y][y])
-
+    
     if matrix[y - 1][y] != 0:
       multiple = int(matrix[y - 1][y]) / int(matrix[1][1])
       rref[y - 1][y] = int(matrix[y - 1][y]) - (multiple * int(matrix[1][1]))
