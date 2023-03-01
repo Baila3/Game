@@ -20,7 +20,7 @@ def matrixsolver():
   for rows in range(len(matrix[0])):
     if matrix[y][y] != 1:
       rref[y][y] = int(matrix[y][y]) / int(matrix[y][y])
-
+    #reduce row to 1
     if y + 1 != len(matrix):
       if matrix[y + 1][y] != 0:
         multiple = int(matrix[y + 1][y]) / int(matrix[y][y])
@@ -29,10 +29,12 @@ def matrixsolver():
     else:
         multiple = int(matrix[y][y]) / int(matrix[0][0])
         rref[y][0] = int(matrix[y][y]) - (multiple * int(matrix[0][0]))
-
+     
+     #reduce entry to 1
     if matrix[y][y] !=1:
       rref[y][y] = int(matrix[y][y]) / int(matrix[y][y])
-    
+
+   # reduce entry to 0
     if matrix[y - 1][y] != 0:
       multiple = int(matrix[y - 1][y]) / int(matrix[1][1])
       rref[y - 1][y] = int(matrix[y - 1][y]) - (multiple * int(matrix[1][1]))
